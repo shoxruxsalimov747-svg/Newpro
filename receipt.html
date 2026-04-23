@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bron Cheki</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/receipt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-car-side"></i> Smart Parking</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="receipt-card">
+            <div class="receipt-header">
+                <i class="fas fa-check-circle fa-3x" style="color: var(--success-color);"></i>
+                <h2>Muvaffaqiyatli Bron Cheki</h2>
+                <small>Smart Parking Tizimi</small>
+            </div>
+
+            <div class="receipt-details">
+                <div class="detail-row"><span>Chek ID:</span> <span id="receipt-id">#XXXXX</span></div>
+                <div class="detail-row"><span>Joy ID:</span> <span id="receipt-spot-id">A-00</span></div>
+                <div class="detail-row"><span>Avtomobil Raqami:</span> <span id="receipt-car-number">00 A 000 AA</span></div>
+                <div class="detail-row"><span>Bron Vaqti (boshlanish):</span> <span id="receipt-start-time">XX:XX</span></div>
+                <div class="detail-row"><span>Davomiyligi:</span> <span id="receipt-duration">X soat</span></div>
+                <div class="detail-row"><span>To'lov Usuli:</span> <span id="receipt-method">Payme</span></div>
+            </div>
+
+            <div class="total-amount">
+                Jami To'langan: <span id="receipt-total-price">0 UZS</span>
+            </div>
+
+            <button class="print-btn" onclick="window.print()"><i class="fas fa-print"></i> Chekni Chop Etish</button>
+            <a href="index.html" class="btn-primary" style="text-decoration: none; display: block; text-align: center; margin-top: 10px;">Xaritaga Qaytish</a>
+        </div>
+    </main>
+    
+<script src="./js/receipt.js"></script>
+</body>
+</html>

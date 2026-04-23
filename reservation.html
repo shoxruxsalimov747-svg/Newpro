@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bron Qilish</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/reservation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-car-side"></i> Smart Parking</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Joy Bron Qilish</h2>
+        <div class="reservation-form">
+            <div class="form-group">
+                <label for="spot-id"><i class="fas fa-parking"></i> Tanlangan Joy ID</label>
+                <input type="text" id="spot-id" readonly value="Yuklanmoqda...">
+            </div>
+
+            <div class="form-group">
+                <label for="car-number"><i class="fas fa-id-card"></i> Avtomobil Raqami (Uz formatida)</label>
+                <input type="text" id="car-number" placeholder="01 A 123 AA" required>
+            </div>
+
+            <div class="form-group">
+                <label for="duration"><i class="fas fa-clock"></i> Bron Davomiyligi (soat)</label>
+                <select id="duration" required>
+                    <option value="1">1 soat</option>
+                    <option value="2">2 soat</option>
+                    <option value="3">3 soat</option>
+                    <option value="24">24 soat (kunlik)</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <h3><i class="fas fa-money-bill-wave"></i> To'lov Usuli</h3>
+            <div class="payment-methods">
+                <div class="payment-option selected" data-method="payme">
+                    <i class="fas fa-wallet"></i>
+                    <span>Payme</span>
+                </div>
+                <div class="payment-option" data-method="click">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Click</span>
+                </div>
+                <div class="payment-option" data-method="card">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Karta</span>
+                </div>
+            </div>
+
+            <div class="price-summary">
+                <span>Narx (1 soatlik):</span>
+                <span id="hourly-rate">5 000 UZS</span>
+            </div>
+             <div class="price-summary" style="border-top: none;">
+                <span>**Jami To'lov:**</span>
+                <span id="total-price" style="color: var(--danger-color);">5 000 UZS</span>
+            </div>
+
+            <button id="book-btn" class="btn-primary"><i class="fas fa-check-circle"></i> Bronni Tasdiqlash va To'lash</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Smart Parking.</p>
+        </div>
+    </footer>
+
+    <script src="js/reservation.js"></script>
+</body>
+</html>

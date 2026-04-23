@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boshqaruv Paneli</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-car-side"></i> Smart Parking</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2><i class="fas fa-chart-line"></i> Boshqaruv Paneli</h2>
+
+        <section class="stats-cards">
+            <div class="stat-card" style="border-left-color: var(--success-color);">
+                <i class="fas fa-money-bill-wave icon"></i>
+                <h4>Jami Daromad (Oy)</h4>
+                <p id="total-revenue">0 UZS</p>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--primary-color);">
+                <i class="fas fa-car icon"></i>
+                <h4>Bandlik Darajasi</h4>
+                <p id="occupancy-rate">0%</p>
+            </div>
+            <div class="stat-card" style="border-left-color: #ffc107;">
+                <i class="fas fa-users icon"></i>
+                <h4>Yangi Mijozlar (Hafta)</h4>
+                <p id="new-customers">0</p>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--danger-color);">
+                <i class="fas fa-clock icon"></i>
+                <h4>O'rtacha Bron Vaqti</h4>
+                <p id="avg-duration">0 soat</p>
+            </div>
+        </section>
+
+        <h3>Kunlik Bandlik Grafigi</h3>
+        <div class="chart-container">
+            <canvas id="occupancyChart"></canvas>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Smart Parking | Admin Panel.</p>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
